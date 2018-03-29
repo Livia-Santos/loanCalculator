@@ -43,4 +43,11 @@ function showError(error) {
   errorDiv.appendChild(document.createTextNode(error));
   // insert error above heading
   card.insertBefore(errorDiv, heading);
+  // Clear error after 3 seconds
+  setTimeout(clearError, 3000);
+}
+
+// clear error
+function clearError() {
+  document.querySelector('.alert').remove();
 }
